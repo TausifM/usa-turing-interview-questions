@@ -20,6 +20,7 @@ app.use("^/$", (req, res, next) => {
         if(err) {
             return res.status(500).send("Server Error");
         }
+        console.log(data, "adata", err);
         return res.send(data.replace('<div id="root"></div>', `<div id="root">${ReactDOMServer.renderToString(<App/>)}</div>`)) // we r using ${} place holder to render the react application
     })
 })
