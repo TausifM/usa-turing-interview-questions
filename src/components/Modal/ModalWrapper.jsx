@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import Modal from './Modal';
 import { ModalContext } from './ModalContext';
+import Screen from './Screen';
 
 const uid = (() => {
     let i = 0;
@@ -28,7 +29,7 @@ const ModalWrapper = () => {
   return (
     <ModalContext.Provider value={actions}>
         <div className="App">
-        <Screen />
+        <Screen  />
         {modals}
         </div>
     </ModalContext.Provider>
