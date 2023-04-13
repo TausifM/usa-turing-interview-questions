@@ -3,24 +3,25 @@ import { useModals } from './ModalContext';
 const Screen = () => {
     const {push} = useModals();
     const showModal3 = (e) => {
+      const target = e.currentTarget;
         push(
           <div>
             modal 3<button tabIndex={0}> close all</button>
           </div>,
-          e.currentTarget
+          target
         );
       };
     
       const showModal2 = (e) => {
+        const target = e.currentTarget;
         push(
           <div>
             modal 2
             <button onClick={showModal3} tabIndex={0}>
-              {" "}
               show modal 3
             </button>
           </div>,
-          e.currentTarget
+          target
         );
       };
     
